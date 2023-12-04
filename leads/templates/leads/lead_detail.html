@@ -24,12 +24,8 @@
         }
     </style>
     <body>
-        <h1>This is all of our leads</h1>
-        {% for lead in leads %}
-            <div>
-                <a href="/leads/{{lead.pk}}">{{lead.first_name}} {{lead.last_name}}</a>. Age: {{lead.age}}
-            </div>
-        {% endfor %}
+        <h1>This is detail of {{lead.first_name}}</h1>
+        <p>This persons age: {{ lead.age }} </p1>
         <script src="" async defer></script>
     </body>
 </html>
