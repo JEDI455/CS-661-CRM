@@ -24,10 +24,12 @@
         }
     </style>
     <body>
+        <a href="{% url "leads:lead-create" %}">Create a new lead</a>
+        <hr />
         <h1>This is all of our leads</h1>
         {% for lead in leads %}
             <div>
-                <a href="/leads/{{lead.pk}}">{{lead.first_name}} {{lead.last_name}}</a>. Age: {{lead.age}}
+                <a href="{% url 'leads:lead-detail' lead.pk%}">{{lead.first_name}} {{lead.last_name}}</a>. Age: {{lead.age}}
             </div>
         {% endfor %}
         <script src="" async defer></script>
