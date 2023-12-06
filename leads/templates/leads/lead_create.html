@@ -26,8 +26,12 @@
     <body>
         <a href="/leads/">Go back to leads</a>
         <hr />
-        <h1>This is detail of {{lead.first_name}}</h1>
-        <p>This persons age: {{ lead.age }} </p1>
+        <h1>Create a new lead</h1>
+        <form method="post" action =".">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Submit</button>
+        </form>
         <script src="" async defer></script>
     </body>
 </html>
