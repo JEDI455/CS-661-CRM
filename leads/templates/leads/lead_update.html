@@ -1,29 +1,5 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <style>
-        .lead {
-            padding-top: 10px;
-            padding-bottom: 10px;
-            padding-left: 6px;
-            padding-right: 6px;
-            margin-top: 10px;
-            background-color: #f6f6f6;
-            width: 100%;
-        }
-    </style>
-    <body>
+{% extends "base.html" %}
+{%block content%}
         <a href="{% url "leads:lead-detail" lead.pk %}">Go back to leads</a>
         <hr />
         <h1>Update lead: {{ lead.first_name}} {{lead.last_name}}</h1>
@@ -32,6 +8,4 @@
             {{ form.as_p }}
             <button type="submit">Submit</button>
         </form>
-        <script src="" async defer></script>
-    </body>
-</html>
+{%endblock content%}
